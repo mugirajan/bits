@@ -19,7 +19,7 @@ class sndMail
     }
 
     public function contactEnquiry($data) {
-        $this->sendEnquiryMailToEnquirer($data['username'], $data['email']);
+        $this->sendEnquiryMailToEnquirer($data['name'], $data['email']);
         $this->sendEnquiryMailToAdmin($data);
         return $this->valid;
     }
@@ -81,7 +81,7 @@ class sndMail
         // to be changes for production env.
         $mail->AddAddress("contact@blackitechs.com");
 
-        $mail->Subject = "New enquiry - ". $data['username'];
+        $mail->Subject = "New enquiry - ". $data['name'];
 
         $mail->msgHTML("  
         <h3> Contact details: </h3>
@@ -92,11 +92,11 @@ class sndMail
 
         ");
         if ($mail->send()) {
-            file_put_contents($this->f, "Mail sent to admin for ".$data['username']." - Enquiry". PHP_EOL, FILE_APPEND | LOCK_EX);
+            file_put_contents($this->f, "Mail sent to admin for ".$data['name']." - Enquiry". PHP_EOL, FILE_APPEND | LOCK_EX);
             $this->valid['success'] = true;
             $this->valid['message'] = "Mail sent successfully...!!!";
         } else {
-            file_put_contents($this->f, "Failed to send mail to admin for ".$data['username']."- Enquiry " . PHP_EOL, FILE_APPEND | LOCK_EX);
+            file_put_contents($this->f, "Failed to send mail to admin for ".$data['name']."- Enquiry " . PHP_EOL, FILE_APPEND | LOCK_EX);
             $this->valid['success'] = false;
             $this->valid['message'] = "Failed to send mail...!!!";
         }
@@ -107,5 +107,6 @@ class sndMail
 
     
 }
+
 
 ?>

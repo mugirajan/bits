@@ -8,19 +8,11 @@ if (isset($_POST)) {
     
     $res = array("success" => false, "message" => "");
 
-    switch ($_POST["type"]) {
-        
-        case "contact":
-            $res = $sm->contactEnquiry($_POST);
-            break;
-
-        default:
-            $res["success"] = false;
-            $res["message"] = "Invalid request";
-            break;
-    }
+    $res = $sm->contactEnquiry($_POST);
     
     echo json_encode($res);
 }
+
+
 
 ?>

@@ -1,13 +1,17 @@
+
 $("#contact-form").unbind("submit").bind("submit", function() {
 
     let form = new FormData(this);
-   
+    
 
     $.ajax({
-        url: "php/mailController.php",
+        url: "./php/mailController.php",
         type: "POST",
         data: form,
         dataType: 'json',
+        cache: false,
+        contentType: false,
+        processData: false,
         success:function(response) {
             console.log("Success: ", response)
             if(response.success) {
@@ -37,14 +41,21 @@ $("#contact-form").unbind("submit").bind("submit", function() {
                     });
                 }); // /.alert
             }
+            $("#contact-form")[0].reset();
+            console.log("dcfvghjbjn");
         },
         error: function(response) {
             console.log("Error: ", response)
-            customToast(response.message, "error")
+            $("#contact-form")[0].reset();
         }
     });
 
     return false;
 
+    
+
 });
+
+
+
 

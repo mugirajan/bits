@@ -42,6 +42,6 @@ function redirectToContact(){
 }
 
 
-document.getElementById('learnMoreLink').addEventListener('click', function() {
-    $('#myModal').modal('show');
-});
+// document.getElementById('learnMoreLink').addEventListener('click', function() {
+//     $('#myModal').modal('show');
+// });
