@@ -1,17 +1,19 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
+    $tel = $_POST["tel"];
     $email = $_POST["email"];
     $message = $_POST["message"];
 
     
-    $to = "mugirajan95@gmail.com";  
+    $to = "contact@blackitechs.com";  
 
     
     $subject = "contact us";
 
     
     $message_body = "Name: $name\n";
+    $message_body = "Tel: $tel\n";
     $message_body .= "Email: $email\n\n";
     $message_body .= "Message:\n$message";
 
@@ -26,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Oops! Something went wrong, and we couldn't send your message.";
     }
 } else {
-    header("Location: contact.html");
+    header("Location: index.html");
     exit();
 }
 ?>

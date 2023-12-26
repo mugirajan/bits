@@ -14829,7 +14829,23 @@ p {
 
 
 
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+  appearance: textfield;
+ 
+}
 
+/* Hide the number input arrows in Chrome and Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Additional styles for other browsers (optional) */
+input[type="number"] {
+  -ms-appearance: textfield; /* Internet Explorer/Edge */
+}
 
 
 
