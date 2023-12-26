@@ -1,7 +1,7 @@
 $("#contact-form").unbind("submit").bind("submit", function() {
 
     let form = new FormData(this);
-    form.append("type", "contact");
+   
 
     $.ajax({
         url: "php/mailController.php",
