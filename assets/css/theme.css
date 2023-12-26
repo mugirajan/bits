@@ -461,8 +461,12 @@ progress {
 
 .list-inline-item {
   display: inline-block; }
+  .list-inline-item-item {
+    display: inline-block; }
   .list-inline-item:not(:last-child) {
-    margin-right: 0.5rem; }
+    margin-right: 0rem; }
+
+   
 
 .initialism {
   font-size: 0.875em;
@@ -14342,9 +14346,17 @@ p {
     background-color:black !important;
   }
 
-  .img-container img{
-    height:35rem !important;
+  @media(min-width:800px){
+    .img-container img{
+      height:35rem !important;
+    }
   }
+  @media(max-width:799px){
+    .img-container img{
+      height:20rem !important;
+    }
+  }
+  
 
   /*wordpress page*/
   .hero-2{
@@ -14696,12 +14708,19 @@ p {
 /*workflow-end*/
 
 /**/
-
+@media(min-width:768px){
 .home-about-sec{
   background: url(../images/avatars/bg-about-2.jpg);
   background-repeat: no-repeat;
     background-size: cover;
 }
+}
+@media(max-width:767px){
+  .home-about-sec{
+    background-color:#f1b052
+  }
+}
+
 @media(max-width:768px){
   .about-banner{
     margin-top:3rem !important;
@@ -14859,4 +14878,38 @@ input[type="number"] {
 } */
 /*team-section end*/
 
+
+.text-services{
+  width:70%;
+}
+.img-services img{
+  width:100%;
+  
+}
+
+
+@media(max-width:425px){
+  
+  .img-services img{
+    width:100%;
+    margin:0 auto;
+  }
+  .img-services{
+    margin:0 auto;
+  }
+  .text-services{
+    width:100%;
+  }
+  .com-services{
+    flex-wrap:wrap;
+  }
+}
+
+
+.list-inline-item{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 
