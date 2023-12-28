@@ -13,7 +13,8 @@ $("#contact-form").unbind("submit").bind("submit", function() {
         contentType: false,
         processData: false,
         success:function(response) {
-            console.log("Success: ", response)
+            
+            // console.log("Success: ", response)
             if(response.success) {
                 // shows a successful message after operation
                 $('.mail-messages').html('<div class="alert alert-success">'+
@@ -42,10 +43,10 @@ $("#contact-form").unbind("submit").bind("submit", function() {
                 }); // /.alert
             }
             $("#contact-form")[0].reset();
-            console.log("dcfvghjbjn");
         },
         error: function(response) {
-            console.log("Error: ", response)
+            
+            // console.log("Error: ", response)
             $("#contact-form")[0].reset();
         }
     });

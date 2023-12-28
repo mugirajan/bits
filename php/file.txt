@@ -113,3 +113,6 @@ Mail sent to admin for Mugilavathi  - Enquiry
 file ready
 Mail sent to kamal for Enquiry
 Mail sent to admin for kamal - Enquiry
+file ready
+Mail sent to kamalraj for Enquiry
+Mail sent to admin for kamalraj - Enquiry

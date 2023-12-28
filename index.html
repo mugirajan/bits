@@ -426,7 +426,6 @@
     </section>
     <!-- cta + footer end -->
     
-
     <!-- back to top -->
     <a class="btn btn-soft-primary shadow-none btn-icon btn-back-to-top" href='#'><i class="icon-xxs" data-feather="arrow-up"></i></a>
 
@@ -434,28 +433,27 @@
     <!-- vendor js -->
     <script src="./assets/js/vendor.min.js"></script>
 
-
     <!-- theme js -->
     <script src="./assets/js/theme.min.js"></script>
     <script src="./assets/js/mailer.js"></script>
 
       <!-- nav js -->
-      <script src="./assets/js/navigation.js"></script>
-      <script>
+    <script src="./assets/js/navigation.js"></script>
+    <script>
+      
+    function validateNumber(input) {
+      
+        const value = input.value.replace(/\D/g, ''); 
+        const maxLength = 10;
 
+        if (value.length <= maxLength) {
+            input.classList.remove('invalid');
+        } else {
+            input.classList.add('invalid');
+            alert('Only 10 digits are allowed...!');
+        }
+        input.value = value.slice(0, maxLength); 
 
-        function validateNumber(input) {
-      const value = input.value.replace(/\D/g, ''); 
-      const maxLength = 10;
-
-      if (value.length <= maxLength) {
-        input.classList.remove('invalid');
-      } else {
-        input.classList.add('invalid');
-        alert('Only 10 digits are allowed.');
-      }
-
-      input.value = value.slice(0, maxLength); 
     }
       </script>
 </body>
