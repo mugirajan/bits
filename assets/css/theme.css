@@ -14906,10 +14906,17 @@ input[type="number"] {
 }
 
 
+/* custom styles */
+@media(max-width:442px) {
+ 
+  .break-in-mob::after {
+    content: "\a";
+    white-space: pre;
+  }
+}
+
+
 .list-inline-item{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  
+  text-align: center;
 }
 
